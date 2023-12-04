@@ -1,46 +1,61 @@
 {
-  "name": "express-sas",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "node dist/app.js",
-    "dev": "nodemon src/app.ts",
-    "build": "tsc -p ."
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@prisma/client": "^5.6.0",
-    "bcryptjs": "^2.4.3",
-    "cors": "^2.8.5",
-    "dayjs": "^1.11.10",
-    "dotenv": "^16.3.1",
-    "express": "^4.18.2",
-    "express-async-handler": "^1.2.0",
-    "express-handlebars": "^7.1.2",
-    "helmet": "^7.1.0",
-    "http-status-codes": "^2.3.0",
-    "jsonwebtoken": "^9.0.2",
-    "mysql2": "^3.6.5",
-    "nodemailer": "^6.9.7",
-    "nodemailer-express-handlebars": "^6.1.0",
-    "pino": "^8.16.2",
-    "pino-pretty": "^10.2.3",
-    "valid-env": "^1.1.1"
-  },
-  "devDependencies": {
-    "@types/bcryptjs": "^2.4.6",
-    "@types/cors": "^2.8.17",
-    "@types/express": "^4.17.21",
-    "@types/jsonwebtoken": "^9.0.5",
-    "@types/node": "^20.10.2",
-    "@types/nodemailer": "^6.4.14",
-    "@types/nodemailer-express-handlebars": "^4.0.5",
-    "nodemon": "^3.0.2",
-    "prisma": "^5.6.0",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.3.2"
-  }
+    "name": "express-sas",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node dist/app.js",
+        "dev": "nodemon src/app.ts",
+        "pretty": "pnpm exec prettier . --write",
+        "build": "tsc -p ."
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@hapi/boom": "^10.0.1",
+        "@prisma/client": "^5.6.0",
+        "bcryptjs": "^2.4.3",
+        "cors": "^2.8.5",
+        "dayjs": "^1.11.10",
+        "dotenv": "^16.3.1",
+        "express": "^4.18.2",
+        "express-async-handler": "^1.2.0",
+        "express-handlebars": "^7.1.2",
+        "express-validator": "^7.0.1",
+        "helmet": "^7.1.0",
+        "http-status-codes": "^2.3.0",
+        "joi": "^17.11.0",
+        "jsonwebtoken": "^9.0.2",
+        "mysql2": "^3.6.5",
+        "nodemailer": "^6.9.7",
+        "nodemailer-express-handlebars": "^6.1.0",
+        "pino": "^8.16.2",
+        "pino-pretty": "^10.2.3",
+        "valid-env": "^1.1.1"
+    },
+    "devDependencies": {
+        "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+        "@types/bcryptjs": "^2.4.6",
+        "@types/cors": "^2.8.17",
+        "@types/express": "^4.17.21",
+        "@types/jsonwebtoken": "^9.0.5",
+        "@types/node": "^20.10.2",
+        "@types/nodemailer": "^6.4.14",
+        "@types/nodemailer-express-handlebars": "^4.0.5",
+        "@typescript-eslint/eslint-plugin": "^6.13.1",
+        "@typescript-eslint/parser": "^6.13.1",
+        "eslint": "^8.55.0",
+        "eslint-plugin-import": "^2.29.0",
+        "nodemon": "^3.0.2",
+        "prettier": "3.1.0",
+        "prisma": "^5.6.0",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.3.2"
+    },
+    "pnpm": {
+        "patchedDependencies": {
+            "@types/express@4.17.21": "patches/@types__express@4.17.21.patch"
+        }
+    }
 }
